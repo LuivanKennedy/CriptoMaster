@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atom Crypto Master: A Chave para Seus Ganhos em Cripto!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Atom Crypto Master: O Seu Futuro Financeiro em Cripto!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.atomeducacional.com.br/wp-content/uploads/2021/08/cropped-favicon-atom-32x32.png" type="image/x-icon">
     
     <style>
-        /* Variáveis CSS */
+        /* Variáveis CSS - Paleta de Cores Premium */
         :root {
-            --primary-color: #0047AB; /* Azul mais profundo e elegante */
-            --secondary-color: #00C853; /* Verde vibrante para CTA e destaque positivo */
-            --accent-color: #FFD700; /* Amarelo ouro para brilho */
-            --dark-color: #2c3e50; /* Azul escuro quase preto */
-            --light-gray: #ecf0f1; /* Cinza claro suave */
-            --white-color: #ffffff;
-            --text-color: #34495e; /* Cinza para texto geral */
+            --primary-dark: #1A2E40; /* Azul Marinho Profundo - Base escura elegante */
+            --primary-light: #2C5364; /* Azul Petróleo Suave - Para gradientes e fundos secundários */
+            --accent-gold: #FFD700; /* Dourado Nobre - Destaque premium */
+            --accent-green: #4CAF50; /* Verde Esmeralda - Sucesso e ação */
+            --white-pure: #FFFFFF;
+            --off-white: #F8F8F8; /* Branco Sujo - Fundo suave */
+            --text-dark: #333333; /* Texto principal */
+            --text-light: #EEEEEE; /* Texto em fundos escuros */
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-medium: rgba(0, 0, 0, 0.2);
 
-            --font-family-primary: 'Montserrat', sans-serif;
-            --max-width: 1200px;
-            --spacing-xl: 100px;
+            /* Fontes */
+            --font-heading: 'Playfair Display', serif; /* Fonte serifada para títulos de impacto */
+            --font-body: 'Montserrat', sans-serif; /* Fonte sans-serif moderna para o corpo */
+
+            /* Espaçamento e Largura */
+            --max-width-content: 1200px;
+            --spacing-xl: 120px;
             --spacing-lg: 80px;
             --spacing-md: 40px;
             --spacing-sm: 20px;
@@ -34,53 +41,56 @@
         }
 
         body {
-            font-family: var(--font-family-primary);
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--white-color);
+            font-family: var(--font-body);
+            line-height: 1.8; /* Linha altura maior para melhor leitura */
+            color: var(--text-dark);
+            background-color: var(--white-pure);
             -webkit-font-smoothing: antialiased;
             scroll-behavior: smooth;
         }
 
         .container {
-            max-width: var(--max-width);
+            max-width: var(--max-width-content);
             margin: 0 auto;
             padding: 0 var(--spacing-sm);
         }
 
         h1, h2, h3 {
-            color: var(--dark-color);
+            color: var(--primary-dark);
             margin-bottom: var(--spacing-sm);
+            font-family: var(--font-heading); /* Títulos com fonte de destaque */
             font-weight: 700;
         }
 
         h1 {
-            font-size: 3.2em;
-            line-height: 1.2;
-            color: var(--white-color);
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            font-size: 3.8em; /* Aumentado para mais impacto */
+            line-height: 1.1;
+            color: var(--white-pure);
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.6); /* Sombra mais intensa */
         }
 
         h2 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             text-align: center;
             margin-bottom: var(--spacing-lg);
-            color: var(--dark-color);
+            color: var(--primary-dark);
         }
 
         h3 {
-            font-size: 1.8em;
+            font-size: 1.9em;
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-family: var(--font-body); /* H3 com fonte do corpo para clareza */
         }
 
         p {
-            margin-bottom: 1em;
+            margin-bottom: 1.2em;
+            font-size: 1.1em; /* Texto do corpo um pouco maior */
         }
 
         strong {
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--primary-dark); /* Destaques em azul marinho */
         }
 
         /* Seções Padrão */
@@ -89,69 +99,59 @@
         }
 
         .bg-light {
-            background-color: var(--light-gray);
+            background-color: var(--off-white);
         }
 
         /* Botões */
         .btn-primary {
             display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--white-color);
-            padding: 18px 40px;
+            background: linear-gradient(45deg, var(--accent-green), #66BB6A); /* Gradiente verde para CTA */
+            color: var(--white-pure);
+            padding: 20px 45px; /* Padding maior para um botão mais robusto */
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.3em;
-            transition: all 0.3s ease;
+            font-size: 1.4em;
+            transition: all 0.4s ease; /* Transição mais suave */
             text-align: center;
             border: none;
             cursor: pointer;
-            box-shadow: 0 8px 20px rgba(0, 200, 83, 0.3); /* Sombra do botão verde */
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4); /* Sombra mais pronunciada */
+            text-transform: uppercase; /* Texto em maiúsculas para CTA */
+            letter-spacing: 1px; /* Espaçamento entre letras */
         }
 
         .btn-primary:hover {
-            background-color: #00a846; /* Um tom mais escuro de verde */
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 200, 83, 0.4);
+            background: linear-gradient(45deg, #66BB6A, var(--accent-green));
+            transform: translateY(-7px); /* Salto maior */
+            box-shadow: 0 15px 35px rgba(76, 175, 80, 0.5);
         }
 
         /* Animações */
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); } /* Pulo mais alto */
+            60% { transform: translateY(-8px); }
         }
 
         .bounce-animation {
-            animation: bounce 2s infinite;
+            animation: bounce 2.5s infinite; /* Duração ligeiramente maior */
         }
 
         @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 20px rgba(0, 200, 83, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.5); }
+            70% { box-shadow: 0 0 0 30px rgba(76, 175, 80, 0); } /* Efeito de pulso maior */
+            100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
         }
 
         .pulse-animation {
-            animation: pulse 2s infinite;
+            animation: pulse 2.5s infinite;
         }
 
         .hidden-section {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateY(30px); /* Deslocamento maior para o fade-in */
+            transition: opacity 1s ease-out, transform 1s ease-out; /* Duração mais longa */
         }
 
         .fade-in {
@@ -162,313 +162,336 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(0, 71, 171, 0.85), rgba(0, 71, 171, 0.85)), url('https://images.unsplash.com/photo-1620955359286-9a572a912a20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-            color: var(--white-color);
+            background: linear-gradient(rgba(26, 46, 64, 0.88), rgba(26, 46, 64, 0.88)), url('https://images.unsplash.com/photo-1620955359286-9a572a912a20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            color: var(--white-pure);
             padding: var(--spacing-xl) 0;
             text-align: center;
             display: flex;
             align-items: center;
-            min-height: 70vh; /* Mais altura para impacto */
+            min-height: 80vh; /* Ainda mais altura para impacto visual */
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-medium); /* Sombra na base da hero */
         }
 
         .hero-section .subtitle {
-            font-size: 1.6em;
+            font-size: 1.8em; /* Subtítulo maior e mais impactante */
             margin-bottom: var(--spacing-md);
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 400;
+            font-weight: 500; /* Levemente mais fino para contraste com o título */
         }
 
         .hero-btn {
-            margin-top: var(--spacing-sm);
-            padding: 20px 45px;
-            font-size: 1.5em;
+            margin-top: var(--spacing-md); /* Mais espaço */
+            padding: 22px 50px; /* Botão ainda maior */
+            font-size: 1.7em;
         }
 
         /* Problem-Solution Section */
         .problem-solution-section {
-            background-color: var(--white-color);
-            padding: var(--spacing-lg) 0;
+            background-color: var(--white-pure);
+            padding: var(--spacing-xl) 0;
         }
 
         .split-content {
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
-            flex-wrap: wrap; /* Para responsividade */
+            gap: var(--spacing-lg); /* Mais espaço entre colunas */
+            flex-wrap: wrap;
         }
 
         .problem-side, .solution-side {
             flex: 1;
-            min-width: 300px; /* Garante que os blocos não fiquem muito pequenos */
+            min-width: 320px;
         }
 
         .problem-side h2 {
             text-align: left;
             margin-bottom: var(--spacing-sm);
-            font-size: 2.2em;
-            color: var(--primary-color);
+            font-size: 2.5em;
+            color: var(--primary-dark);
         }
 
         .problem-side p {
-            font-size: 1.1em;
-            line-height: 1.8;
+            font-size: 1.2em; /* Texto maior */
+            line-height: 1.9;
         }
 
         .solution-side img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 15px; /* Bordas mais suaves */
+            box-shadow: 0 15px 40px var(--shadow-medium); /* Sombra mais profunda */
         }
 
         /* Benefits Section */
         .benefits-section h2 {
-            color: var(--primary-color);
+            color: var(--primary-dark);
             margin-bottom: var(--spacing-xl);
+            position: relative;
+        }
+        .benefits-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-gold);
+            margin: 20px auto 0;
+            border-radius: 2px;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: var(--spacing-md);
         }
 
         .benefit-item {
-            background-color: var(--white-color);
+            background-color: var(--white-pure);
             padding: var(--spacing-md);
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px; /* Bordas mais arredondadas */
+            box-shadow: 0 10px 30px var(--shadow-light); /* Sombra suave */
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
+            border: 2px solid transparent; /* Borda inicial transparente */
         }
 
         .benefit-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--shadow-medium);
+            border-color: var(--primary-dark); /* Borda escura no hover */
         }
 
         .icon-circle {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            width: 70px;
-            height: 70px;
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary-light)); /* Gradiente nos ícones */
+            color: var(--white-pure);
+            width: 80px; /* Ícones maiores */
+            height: 80px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2.5em;
+            font-size: 3em; /* Tamanho do ícone */
             margin-bottom: var(--spacing-sm);
-            box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 3px solid var(--accent-gold); /* Borda dourada */
         }
 
         .benefit-item h3 {
-            color: var(--dark-color);
-            font-size: 1.5em;
+            color: var(--primary-dark);
+            font-size: 1.7em;
             margin-bottom: 10px;
         }
 
         .benefit-item p {
             font-size: 1em;
-            line-height: 1.7;
-            color: var(--text-color);
+            line-height: 1.6;
+            color: var(--text-dark);
         }
 
         /* Target Audience Section */
         .target-audience-section h2 {
-            color: var(--dark-color);
+            color: var(--primary-dark);
             margin-bottom: var(--spacing-lg);
         }
 
         .audience-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--spacing-sm);
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Colunas maiores */
+            gap: var(--spacing-md);
         }
 
         .audience-item {
-            background-color: var(--light-gray);
-            padding: var(--spacing-sm);
-            border-radius: 8px;
-            font-size: 1.1em;
-            color: var(--dark-color);
+            background-color: var(--off-white);
+            padding: var(--spacing-md);
+            border-radius: 10px;
+            font-size: 1.15em; /* Texto maior */
+            color: var(--text-dark);
             display: flex;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px var(--shadow-light);
+            transition: transform 0.3s ease;
+        }
+        .audience-item:hover {
+            transform: translateX(10px); /* Pequeno slide no hover */
         }
 
         .audience-item p {
             margin: 0;
-            padding-left: 10px; /* Espaço para o ícone */
+            padding-left: 15px;
+            font-weight: 500;
         }
 
         .audience-item p::before {
-            content: '✅';
+            content: '✔️'; /* Checkmark mais premium */
             margin-right: 10px;
-            color: var(--secondary-color);
-            font-size: 1.2em;
+            color: var(--accent-green);
+            font-size: 1.4em;
         }
 
         /* CTA Price Section */
         .cta-price-section {
-            background: linear-gradient(45deg, var(--primary-color) 0%, #007bff 100%); /* Gradiente azul */
-            color: var(--white-color);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%); /* Gradiente de azul profundo */
+            color: var(--white-pure);
             text-align: center;
             padding: var(--spacing-xl) 0;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.3); /* Sombra na parte superior */
         }
 
         .cta-price-section h2 {
-            color: var(--white-color);
-            font-size: 3em;
+            color: var(--accent-gold); /* Título em dourado */
+            font-size: 3.5em; /* Título maior e mais impactante */
             margin-bottom: var(--spacing-md);
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            font-family: var(--font-heading);
         }
 
         .cta-price-section .highlight-message {
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: 600;
             margin-bottom: var(--spacing-lg);
+            color: var(--off-white);
         }
 
         .price-card {
-            background-color: var(--white-color);
-            color: var(--dark-color);
-            padding: var(--spacing-md);
-            border-radius: 15px;
-            max-width: 500px;
+            background-color: var(--white-pure);
+            color: var(--primary-dark);
+            padding: var(--spacing-lg); /* Padding maior */
+            border-radius: 20px; /* Mais arredondado */
+            max-width: 550px; /* Card um pouco maior */
             margin: 0 auto var(--spacing-lg) auto;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            border: 4px solid var(--accent-color); /* Borda amarela de destaque */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); /* Sombra muito mais pronunciada */
+            border: 5px solid var(--accent-gold); /* Borda dourada mais grossa */
             position: relative;
-            z-index: 2; /* Para ficar acima do background */
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+        .price-card:hover {
+            transform: translateY(-5px); /* Pequeno levitar no hover */
         }
 
         .price-card .price-from {
-            font-size: 1.2em;
-            color: var(--text-color);
-            margin-bottom: 5px;
+            font-size: 1.3em;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
         .price-card .strikethrough {
             text-decoration: line-through;
-            color: #dc3545; /* Vermelho para o preço riscado */
+            color: #E74C3C; /* Vermelho mais vibrante */
             font-weight: 600;
+            font-size: 1.1em; /* Preço riscado ligeiramente menor */
         }
 
         .price-card .main-price {
-            font-size: 4.5em; /* Preço principal GIGANTE */
+            font-size: 5.5em; /* Preço principal GIGANTESCO */
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--primary-dark);
             line-height: 1;
-            margin-top: 10px;
-            margin-bottom: 5px;
+            margin-top: 15px;
+            margin-bottom: 10px;
         }
 
         .price-card .payment-option {
-            font-size: 1.5em;
-            color: var(--primary-color);
+            font-size: 1.8em;
+            color: var(--primary-dark);
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .price-card .or-separator {
-            font-size: 1.2em;
-            color: var(--gray-color);
-            margin: 10px 0;
+            font-size: 1.3em;
+            color: var(--text-dark);
+            margin: 15px 0;
             font-weight: 600;
         }
 
         .price-card .installments {
-            font-size: 1.8em;
+            font-size: 2.2em; /* Parcelamento maior */
             font-weight: 700;
-            color: var(--dark-color);
-            margin-bottom: 25px;
+            color: var(--primary-dark);
+            margin-bottom: 30px;
         }
 
         .price-cta {
-            width: 90%; /* Botão quase na largura total do card */
+            width: 90%;
             margin: 0 auto;
-            font-size: 1.4em;
-            padding: 15px 30px;
+            font-size: 1.6em;
+            padding: 18px 35px;
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.5); /* Sombra mais intensa */
+        }
+        .price-cta:hover {
+             box-shadow: 0 15px 35px rgba(76, 175, 80, 0.6);
         }
 
         .guarantee-box {
-            background-color: var(--white-color); /* Fundo branco para a garantia */
-            color: var(--dark-color);
-            padding: var(--spacing-md);
-            border-radius: 10px;
-            max-width: 700px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            font-size: 1.1em;
+            background-color: var(--white-pure);
+            color: var(--text-dark);
+            padding: var(--spacing-lg); /* Padding maior */
+            border-radius: 15px;
+            max-width: 800px; /* Box de garantia maior */
+            margin: var(--spacing-lg) auto 0 auto;
+            box-shadow: 0 15px 40px var(--shadow-medium);
+            font-size: 1.2em;
             font-weight: 500;
-            line-height: 1.6;
-            border-left: 5px solid var(--secondary-color); /* Linha verde na lateral */
+            line-height: 1.7;
+            border-left: 6px solid var(--accent-green); /* Linha verde mais grossa */
             text-align: left;
-            margin-top: var(--spacing-md);
         }
 
         .guarantee-box h3 {
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-            font-size: 1.8em;
+            color: var(--accent-green);
+            margin-bottom: 12px;
+            font-size: 2em; /* Título da garantia maior */
+            font-family: var(--font-heading);
+        }
+        .guarantee-box p strong {
+            color: var(--accent-green); /* Destaque na garantia em verde */
         }
 
 
         /* Footer */
         .footer-section {
-            background-color: var(--dark-color);
-            color: var(--light-gray);
+            background-color: var(--primary-dark);
+            color: var(--text-light);
             text-align: center;
             padding: var(--spacing-md) 0;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
 
         .footer-section p {
-            margin-bottom: 0.5em;
+            margin-bottom: 0.6em;
+            line-height: 1.5;
         }
 
         .footer-section strong {
-            color: var(--white-color);
+            color: var(--white-pure);
         }
 
         /* Responsividade */
         @media (max-width: 992px) {
-            h1 {
-                font-size: 2.8em;
-            }
-            h2 {
-                font-size: 2.2em;
-            }
-            .hero-section .subtitle {
-                font-size: 1.4em;
-            }
-            .price-card .main-price {
-                font-size: 3.8em;
-            }
-            .cta-price-section h2 {
-                font-size: 2.5em;
-            }
+            h1 { font-size: 3em; }
+            h2 { font-size: 2.3em; }
+            .hero-section .subtitle { font-size: 1.5em; }
+            .price-card .main-price { font-size: 4em; }
+            .cta-price-section h2 { font-size: 2.8em; }
+            .hero-btn { font-size: 1.4em; padding: 18px 40px; }
+            .price-cta { font-size: 1.3em; padding: 16px 30px; }
+            .section-padding { padding: var(--spacing-md) 0; }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2em;
-            }
-            h2 {
-                font-size: 2em;
-            }
-            .hero-section .subtitle {
-                font-size: 1.2em;
-            }
+            h1 { font-size: 2.4em; }
+            h2 { font-size: 2em; }
+            .hero-section .subtitle { font-size: 1.2em; }
             .hero-btn, .btn-primary {
                 font-size: 1.1em;
                 padding: 15px 30px;
@@ -480,63 +503,29 @@
                 min-width: unset;
                 width: 100%;
             }
-            .problem-side h2 {
-                text-align: center;
-            }
+            .problem-side h2 { text-align: center; font-size: 2em;}
             .benefits-grid, .audience-grid {
                 grid-template-columns: 1fr;
             }
-            .benefit-item, .audience-item {
-                padding: var(--spacing-sm);
-            }
-            .price-card .main-price {
-                font-size: 3em;
-            }
-            .price-card .installments {
-                font-size: 1.5em;
-            }
-            .cta-price-section h2 {
-                font-size: 2em;
-            }
-            .guarantee-box {
-                text-align: center;
-            }
+            .benefit-item, .audience-item { padding: var(--spacing-sm); }
+            .price-card .main-price { font-size: 3.5em; }
+            .price-card .installments { font-size: 1.8em; }
+            .cta-price-section h2 { font-size: 2.2em; }
+            .guarantee-box { text-align: center; padding: var(--spacing-sm); }
+            .guarantee-box h3 { text-align: center;}
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            h2 {
-                font-size: 1.7em;
-            }
-            .hero-section .subtitle {
-                font-size: 1em;
-            }
-            .hero-btn, .btn-primary {
-                font-size: 1em;
-                padding: 12px 25px;
-            }
-            .icon-circle {
-                width: 60px;
-                height: 60px;
-                font-size: 2em;
-            }
-            .benefit-item h3 {
-                font-size: 1.3em;
-            }
-            .price-card .main-price {
-                font-size: 2.5em;
-            }
-            .price-card .installments {
-                font-size: 1.3em;
-            }
-            .cta-price-section h2 {
-                font-size: 1.8em;
-            }
-            .guarantee-box h3 {
-                font-size: 1.5em;
-            }
+            h1 { font-size: 1.9em; }
+            h2 { font-size: 1.8em; }
+            .hero-section .subtitle { font-size: 1em; }
+            .hero-btn, .btn-primary { font-size: 1em; padding: 12px 25px; }
+            .icon-circle { width: 65px; height: 65px; font-size: 2.5em; }
+            .benefit-item h3 { font-size: 1.5em; }
+            .price-card .main-price { font-size: 3em; }
+            .price-card .installments { font-size: 1.5em; }
+            .cta-price-section h2 { font-size: 2em; }
+            .guarantee-box h3 { font-size: 1.6em; }
         }
     </style>
 </head>
@@ -661,25 +650,23 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Optional: Add a class to sections when they are in view for fade-in effect
             const sections = document.querySelectorAll('section');
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.1 // Trigger when 10% of the section is visible
+                threshold: 0.1
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('fade-in');
-                        observer.unobserve(entry.target); // Stop observing once it's visible
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
             sections.forEach(section => {
-                // 'hidden-section' is already added in HTML, so we just observe
                 observer.observe(section);
             });
         });
