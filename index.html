@@ -3,99 +3,651 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atom Crypto Master - Domine o Mercado Cripto!</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Atom Crypto Master: A Chave para Seus Ganhos em Cripto!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.atomeducacional.com.br/wp-content/uploads/2021/08/cropped-favicon-atom-32x32.png" type="image/x-icon">
+    
+    <style>
+        /* Variáveis CSS */
+        :root {
+            --primary-color: #0047AB; /* Azul mais profundo e elegante */
+            --secondary-color: #00C853; /* Verde vibrante para CTA e destaque positivo */
+            --accent-color: #FFD700; /* Amarelo ouro para brilho */
+            --dark-color: #2c3e50; /* Azul escuro quase preto */
+            --light-gray: #ecf0f1; /* Cinza claro suave */
+            --white-color: #ffffff;
+            --text-color: #34495e; /* Cinza para texto geral */
+
+            --font-family-primary: 'Montserrat', sans-serif;
+            --max-width: 1200px;
+            --spacing-xl: 100px;
+            --spacing-lg: 80px;
+            --spacing-md: 40px;
+            --spacing-sm: 20px;
+        }
+
+        /* Reset e Estilos Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--white-color);
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+
+        h1, h2, h3 {
+            color: var(--dark-color);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3.2em;
+            line-height: 1.2;
+            color: var(--white-color);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            color: var(--dark-color);
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        strong {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Seções Padrão */
+        .section-padding {
+            padding: var(--spacing-lg) 0;
+        }
+
+        .bg-light {
+            background-color: var(--light-gray);
+        }
+
+        /* Botões */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3em;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 200, 83, 0.3); /* Sombra do botão verde */
+        }
+
+        .btn-primary:hover {
+            background-color: #00a846; /* Um tom mais escuro de verde */
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 200, 83, 0.4);
+        }
+
+        /* Animações */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .bounce-animation {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(0, 200, 83, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        .hidden-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 71, 171, 0.85), rgba(0, 71, 171, 0.85)), url('https://images.unsplash.com/photo-1620955359286-9a572a912a20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            color: var(--white-color);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            min-height: 70vh; /* Mais altura para impacto */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.6em;
+            margin-bottom: var(--spacing-md);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .hero-btn {
+            margin-top: var(--spacing-sm);
+            padding: 20px 45px;
+            font-size: 1.5em;
+        }
+
+        /* Problem-Solution Section */
+        .problem-solution-section {
+            background-color: var(--white-color);
+            padding: var(--spacing-lg) 0;
+        }
+
+        .split-content {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap; /* Para responsividade */
+        }
+
+        .problem-side, .solution-side {
+            flex: 1;
+            min-width: 300px; /* Garante que os blocos não fiquem muito pequenos */
+        }
+
+        .problem-side h2 {
+            text-align: left;
+            margin-bottom: var(--spacing-sm);
+            font-size: 2.2em;
+            color: var(--primary-color);
+        }
+
+        .problem-side p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .solution-side img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Benefits Section */
+        .benefits-section h2 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .benefit-item {
+            background-color: var(--white-color);
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon-circle {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            margin-bottom: var(--spacing-sm);
+            box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3);
+        }
+
+        .benefit-item h3 {
+            color: var(--dark-color);
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            font-size: 1em;
+            line-height: 1.7;
+            color: var(--text-color);
+        }
+
+        /* Target Audience Section */
+        .target-audience-section h2 {
+            color: var(--dark-color);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-sm);
+        }
+
+        .audience-item {
+            background-color: var(--light-gray);
+            padding: var(--spacing-sm);
+            border-radius: 8px;
+            font-size: 1.1em;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .audience-item p {
+            margin: 0;
+            padding-left: 10px; /* Espaço para o ícone */
+        }
+
+        .audience-item p::before {
+            content: '✅';
+            margin-right: 10px;
+            color: var(--secondary-color);
+            font-size: 1.2em;
+        }
+
+        /* CTA Price Section */
+        .cta-price-section {
+            background: linear-gradient(45deg, var(--primary-color) 0%, #007bff 100%); /* Gradiente azul */
+            color: var(--white-color);
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-price-section h2 {
+            color: var(--white-color);
+            font-size: 3em;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        }
+
+        .cta-price-section .highlight-message {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .price-card {
+            background-color: var(--white-color);
+            color: var(--dark-color);
+            padding: var(--spacing-md);
+            border-radius: 15px;
+            max-width: 500px;
+            margin: 0 auto var(--spacing-lg) auto;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border: 4px solid var(--accent-color); /* Borda amarela de destaque */
+            position: relative;
+            z-index: 2; /* Para ficar acima do background */
+        }
+
+        .price-card .price-from {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .price-card .strikethrough {
+            text-decoration: line-through;
+            color: #dc3545; /* Vermelho para o preço riscado */
+            font-weight: 600;
+        }
+
+        .price-card .main-price {
+            font-size: 4.5em; /* Preço principal GIGANTE */
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .price-card .payment-option {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .price-card .or-separator {
+            font-size: 1.2em;
+            color: var(--gray-color);
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .price-card .installments {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+        }
+
+        .price-cta {
+            width: 90%; /* Botão quase na largura total do card */
+            margin: 0 auto;
+            font-size: 1.4em;
+            padding: 15px 30px;
+        }
+
+        .guarantee-box {
+            background-color: var(--white-color); /* Fundo branco para a garantia */
+            color: var(--dark-color);
+            padding: var(--spacing-md);
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+            font-weight: 500;
+            line-height: 1.6;
+            border-left: 5px solid var(--secondary-color); /* Linha verde na lateral */
+            text-align: left;
+            margin-top: var(--spacing-md);
+        }
+
+        .guarantee-box h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+
+        /* Footer */
+        .footer-section {
+            background-color: var(--dark-color);
+            color: var(--light-gray);
+            text-align: center;
+            padding: var(--spacing-md) 0;
+            font-size: 0.9em;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5em;
+        }
+
+        .footer-section strong {
+            color: var(--white-color);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8em;
+            }
+            h2 {
+                font-size: 2.2em;
+            }
+            .hero-section .subtitle {
+                font-size: 1.4em;
+            }
+            .price-card .main-price {
+                font-size: 3.8em;
+            }
+            .cta-price-section h2 {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .hero-section .subtitle {
+                font-size: 1.2em;
+            }
+            .hero-btn, .btn-primary {
+                font-size: 1.1em;
+                padding: 15px 30px;
+            }
+            .split-content {
+                flex-direction: column;
+            }
+            .problem-side, .solution-side {
+                min-width: unset;
+                width: 100%;
+            }
+            .problem-side h2 {
+                text-align: center;
+            }
+            .benefits-grid, .audience-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefit-item, .audience-item {
+                padding: var(--spacing-sm);
+            }
+            .price-card .main-price {
+                font-size: 3em;
+            }
+            .price-card .installments {
+                font-size: 1.5em;
+            }
+            .cta-price-section h2 {
+                font-size: 2em;
+            }
+            .guarantee-box {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.7em;
+            }
+            .hero-section .subtitle {
+                font-size: 1em;
+            }
+            .hero-btn, .btn-primary {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+            .icon-circle {
+                width: 60px;
+                height: 60px;
+                font-size: 2em;
+            }
+            .benefit-item h3 {
+                font-size: 1.3em;
+            }
+            .price-card .main-price {
+                font-size: 2.5em;
+            }
+            .price-card .installments {
+                font-size: 1.3em;
+            }
+            .cta-price-section h2 {
+                font-size: 1.8em;
+            }
+            .guarantee-box h3 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header class="hero-section">
         <div class="container">
-            <h1>🚀 Desvende o Mercado Cripto e Multiplique Seus Ganhos!</h1>
-            <p class="subtitle">Aprenda a operar **Bitcoin** e outros criptoativos do zero, **sem intermediários**, com as estratégias e o **método exclusivo do CEO da Atom, Joaquim Paiffer!**</p>
-            <a href="https://hotmart.com/pt-br/marketplace/produtos/atom-cripto-master/D95070555A?ref=A100311960T" class="btn-primary hero-btn">👉 Garanta Minha Vaga Agora!</a>
+            <h1>Desvende o Mercado Cripto e **Multiplique Seus Ganhos!**</h1>
+            <p class="subtitle">Aprenda a operar Bitcoin e criptoativos **do zero, sem intermediários**, com as estratégias e o **método exclusivo do CEO da Atom, Joaquim Paiffer.**</p>
+            <a href="https://hotmart.com/pt-br/marketplace/produtos/atom-cripto-master/D95070555A?ref=A100311960T" class="btn-primary hero-btn bounce-animation">🚀 Quero Lucrar Com Cripto Agora!</a>
         </div>
     </header>
 
     <main>
-        <section class="benefits-section section-padding">
+        <section class="problem-solution-section section-padding hidden-section">
             <div class="container">
-                <h2>Por que o Atom Crypto Master é o treinamento que você precisa?</h2>
+                <div class="split-content">
+                    <div class="problem-side">
+                        <h2>Você está pronto para o futuro do dinheiro?</h2>
+                        <p>O mercado de criptomoedas cresce exponencialmente, mas a maioria das pessoas se sente perdida, com medo de perder dinheiro ou de não saber por onde começar.</p>
+                        <p>Já imaginou transformar seu conhecimento em uma nova fonte de renda, operar com segurança e autonomia, e finalmente **alcançar a liberdade financeira** que sempre sonhou?</p>
+                    </div>
+                    <div class="solution-side">
+                        <img src="https://images.unsplash.com/photo-1621291823157-e9a0f0d2c9c7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Homem analisando gráficos de criptomoedas" class="responsive-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section section-padding bg-light hidden-section">
+            <div class="container">
+                <h2>Por que o Atom Crypto Master é a sua melhor escolha?</h2>
                 <div class="benefits-grid">
                     <div class="benefit-item">
-                        <h3>Potencial de Ganhos Extraordinários</h3>
-                        <p>Descubra como buscar de **U$500 a U$1000 por dia** replicando estratégias validadas no mercado cripto! Conheça casos de sucesso como o de um jovem de 12 anos que se tornou milionário com Bitcoin e a história de quem transformou R$3.000 em R$40.000 em apenas 4 dias.</p>
+                        <div class="icon-circle">💰</div>
+                        <h3>Ganhos Reais e Comprovados</h3>
+                        <p>Descubra as estratégias para buscar de **U$500 a U$1000 por dia!** Aprenda com cases como o jovem que virou milionário e a história de quem transformou R$3.000 em R$40.000 em 4 dias. Sua chance de mudar de patamar.</p>
                     </div>
                     <div class="benefit-item">
-                        <h3>Caminho Completo para o Domínio</h3>
-                        <p>11 módulos claros e práticos, com **mais de 8 horas de conteúdo em 35 videoaulas** e materiais complementares em PDF, que te levam do **absoluto básico ao avançado**, passo a passo.</p>
-                        <h4>O que você vai aprender:</h4>
-                        <ul>
-                            <li>Introdução ao mercado de criptomoedas</li>
-                            <li>Informações Iniciais e Segurança no mundo Cripto</li>
-                            <li>Carteira e como proteger seus investimentos</li>
-                            <li>Análise para operações (fundamental e técnica)</li>
-                            <li>Gerenciamento de Risco</li>
-                            <li>Estratégias de Negociações</li>
-                            <li><strong>Operando na Prática</strong></li>
-                            <li>Biblioteca de operações</li>
-                            <li>Aspecto Emocional do trading</li>
-                            <li><strong>BÔNUS:</strong> Módulo completo sobre **Imposto de Renda em Cripto!**</li>
-                        </ul>
+                        <div class="icon-circle">📚</div>
+                        <h3>Método Completo, do Zero ao Avançado</h3>
+                        <p>Com <strong>11 módulos</strong> e mais de <strong>35 videoaulas práticas</strong> (total de 8h+), você terá o caminho completo: segurança, análise, gerenciamento de risco e **operações na prática**. Inclui **BÔNUS exclusivo sobre Imposto de Renda em Cripto!**</p>
                     </div>
                     <div class="benefit-item">
-                        <h3>Aprenda com as Maiores Autoridades</h3>
-                        <p>Tenha acesso direto às **estratégias validadas** de Joaquim Paiffer e dos **melhores investidores** que construíram fortunas no mercado financeiro.</p>
+                        <div class="icon-circle">👨‍🏫</div>
+                        <h3>Aprenda com Quem Faz Acontecer</h3>
+                        <p>Receba as estratégias **direto de Joaquim Paiffer**, CEO da Atom, e dos melhores investidores do mercado. Nada de teoria vazia, aqui é conhecimento de quem vive o trading.</p>
                     </div>
                     <div class="benefit-item">
-                        <h3>Vantagem Competitiva</h3>
-                        <p>Receba **ferramentas exclusivas** que vão otimizar suas análises e decisões, colocando você à frente no trading de cripto.</p>
+                        <div class="icon-circle">🛠️</div>
+                        <h3>Ferramentas Exclusivas</h3>
+                        <p>Tenha acesso a recursos que otimizam suas análises e decisões, colocando você sempre à frente no mercado. Sua vantagem competitiva para maximizar resultados.</p>
                     </div>
                     <div class="benefit-item">
-                        <h3>Suporte e Mentoria Exclusiva</h3>
-                        <p>Participe de **salas de dúvidas ao vivo toda quinta-feira às 19h**, garantindo que nenhuma pergunta fique sem resposta e aprofunde seus conhecimentos.</p>
+                        <div class="icon-circle">🤝</div>
+                        <h3>Suporte e Mentoria Contínuos</h3>
+                        <p>Tire todas as suas dúvidas em **salas ao vivo toda quinta-feira às 19h**. Conte com apoio constante para aplicar o que aprende e evoluir rapidamente.</p>
                     </div>
                     <div class="benefit-item">
-                        <h3>Certificado de Conclusão</h3>
-                        <p>Ao finalizar o curso com aproveitamento, você recebe um **certificado digital** para comprovar sua expertise no mercado cripto.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>Acesso Prolongado</h3>
-                        <p>Tenha **1 ano de acesso** a todo o conteúdo do curso e às aulas ao vivo!</p>
+                        <div class="icon-circle">🎓</div>
+                        <h3>Certificado Reconhecido</h3>
+                        <p>Conclua o curso e receba seu **certificado digital**, validando sua expertise e seu novo status no universo das criptomoedas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="target-audience-section section-padding bg-light">
+        <section class="target-audience-section section-padding hidden-section">
             <div class="container">
-                <h2>Para Quem é Este Curso?</h2>
-                <div class="audience-list">
-                    <p>✅ Para quem está começando do zero e quer entender o universo das criptomoedas.</p>
-                    <p>✅ Para quem já investe, mas busca estratégias mais avançadas e seguras.</p>
-                    <p>✅ Para quem quer ter autonomia e operar sem depender de terceiros.</p>
-                    <p>✅ Para quem busca uma nova fonte de renda ou quer diversificar seus investimentos.</p>
+                <h2>O Atom Crypto Master é para você que:</h2>
+                <div class="audience-grid">
+                    <div class="audience-item">
+                        <p>✅ Quer começar a investir em cripto do absoluto zero.</p>
+                    </div>
+                    <div class="audience-item">
+                        <p>✅ Já investe, mas busca estratégias avançadas e seguras.</p>
+                    </div>
+                    <div class="audience-item">
+                        <p>✅ Deseja ter autonomia e operar sem depender de terceiros.</p>
+                    </div>
+                    <div class="audience-item">
+                        <p>✅ Busca uma nova fonte de renda ou quer diversificar seus investimentos.</p>
+                    </div>
+                    <div class="audience-item">
+                        <p>✅ Quer aprender com quem realmente tem resultado no mercado.</p>
+                    </div>
+                    <div class="audience-item">
+                        <p>✅ Quer um guia completo para evitar erros comuns e maximizar lucros.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="pricing-guarantee-section section-padding">
+        <section class="cta-price-section section-padding bg-gradient hidden-section">
             <div class="container">
-                <h2>Invista no seu futuro e transforme suas finanças:</h2>
-                <p class="highlight-text">Esta é uma **oportunidade única**! Garanta o seu acesso a um **preço exclusivo e temporário de lançamento!**</p>
-                <div class="price-box">
-                    <p class="original-price">De <span class="strikethrough">R$2.407,00</span> por apenas:</p>
-                    <p class="current-price"><strong>R$ 799,00</strong> à vista no Pix</p>
-                    <p class="installment-price">Ou em até **12x de apenas R$ 66,58** no cartão!</p>
-                </div>
+                <h2>🔥 Não Deixe Essa Oportunidade Escapar! 🔥</h2>
+                <p class="highlight-message">Invista no seu futuro com o **preço de lançamento mais acessível** já visto!</p>
                 
-                <h2 class="guarantee-title">Sua Satisfação Garantida:</h2>
-                <div class="guarantee-box">
-                    <p><strong>7 Dias de Garantia Incondicional:</strong> Se em até 7 dias você não estiver satisfeito, devolvemos 100% do seu investimento. Risco zero para você!</p>
+                <div class="price-card">
+                    <p class="price-from">De <span class="strikethrough">R$2.407,00</span> por apenas:</p>
+                    <p class="main-price">R$ 799,00</p>
+                    <p class="payment-option">à vista no Pix</p>
+                    <p class="or-separator">OU</p>
+                    <p class="installments">12x de **R$ 66,58** no cartão!</p>
+                    <a href="https://hotmart.com/pt-br/marketplace/produtos/atom-cripto-master/D95070555A?ref=A100311960T" class="btn-primary price-cta pulse-animation">👉 Quero Acessar o Atom Crypto Master Agora!</a>
                 </div>
 
-                <a href="https://hotmart.com/pt-br/marketplace/produtos/atom-cripto-master/D95070555A?ref=A100311960T" class="btn-primary bottom-cta">👉 Garanta Minha Vaga na Atom Crypto Master Agora!</a>
+                <div class="guarantee-box">
+                    <h3>Sua Satisfação Garantida:</h3>
+                    <p>Você tem **7 dias de garantia incondicional.** Se não estiver 100% satisfeito, devolvemos seu dinheiro sem burocracia. **Seu risco é ZERO!**</p>
+                </div>
             </div>
         </section>
     </main>
@@ -107,6 +659,30 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Optional: Add a class to sections when they are in view for fade-in effect
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the section is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                // 'hidden-section' is already added in HTML, so we just observe
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
